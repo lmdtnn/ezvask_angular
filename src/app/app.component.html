@@ -1,0 +1,38 @@
+<h1>{{title}}</h1>
+
+<p>Afhentningstid:</p>
+<mat-form-field appearance="fill">
+<mat-label>Vælg en dato</mat-label>
+<input matInput [matDatepicker]="picker"  [min]="minDate" placeholder="ÅÅÅÅ-MM-DD">
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle> 
+<mat-datepicker #picker ></mat-datepicker>
+</mat-form-field>
+
+ <mat-form-field appearance="fill">
+    <mat-label>Tidspunkt</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let time of times" [value]="time.value">
+        {{time.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p>Vægt i kg:</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Vælg</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let weight of weights" [value]="weight.value">
+        {{weight.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+<br>
+  <button mat-raised-button (click)="sendOrder()" >Bestil</button>
+
+<!-- 
+EzVask Booking System
+Frontend/Argurlar
+Jobansøgning opgave hos DFD
+Thanh Bang Nguyen
+-->
