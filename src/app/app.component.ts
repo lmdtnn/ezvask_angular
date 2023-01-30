@@ -75,9 +75,6 @@ export class AppComponent implements OnInit{
     sendOrder(){
     }
 
-    danish() {
-      this._adapter.setLocale('da');
-    }
   
   }
   
